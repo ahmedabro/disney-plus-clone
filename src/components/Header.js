@@ -38,6 +38,8 @@ function Header() {
 
 export default Header
 
+
+// Styled Component CSS code
 const Nav = styled.nav`
     height: 70px;
     background: #090b13;
@@ -94,3 +96,4 @@ const UserImg = styled.img`
     object-fit: cover;
     object-position: center;
 `
+// Styled Component CSS code

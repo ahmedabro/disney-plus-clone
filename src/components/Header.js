@@ -90,8 +90,8 @@ const NavMenu = styled.div`
     }
 `
 const UserImg = styled.img`
-    width: 45px;
-    height: 45px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     object-fit: cover;
     object-position: center;

@@ -3,12 +3,11 @@ import styled from 'styled-components'
 
 function Viewers() {
 
-    const [play, setPlay] = useState(false)
 
   return (
     <ViewerContainer>
       <Row>
-        <ViewerBox onMouseEnter={() => setPlay(true)}>
+        <ViewerBox>
             <img src='/images/viewers-disney.png' alt='disney' />
             <video>
                 <source src="/videos/1564674844-disney.mp4" type="video/mp4" />
@@ -54,12 +53,12 @@ export default Viewers
 const ViewerContainer = styled.div`
     margin-top: 35px;
 `
-const Row = styled.div`
+export const Row = styled.div`
     display: grid;
-    grid-template-columns: calc(20% - 20px) calc(20% - 20px) calc(20% - 20px) calc(20% - 20px) calc(20% - 20px);
+    grid-template-columns: repeat(5, minmax(0, 1fr));
     align-items: center;
     justify-content: center;
-    gap: 25px;
+    grid-gap: 25px;
 `
 const ViewerBox = styled.div`
     background: transparent;
@@ -71,7 +70,7 @@ const ViewerBox = styled.div`
     border: 3px solid #ffffff17;
     box-shadow: rgb(0 0 0 / 69%) 0px 26px 30px -10px, rgb(0 0 0 / 73%) 0px 16px 10px -10px;
     position: relative;
-    transition: 300ms ease-in-out;
+    transition: all 250ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
     cursor: pointer;
     img {
         width: 85%;
@@ -86,7 +85,7 @@ const ViewerBox = styled.div`
         object-fit: cover;
         border-radius: 10px;
         opacity: 0;
-        transition: 300ms ease-in-out;
+        transition: all 250ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
     }
     &:hover {
         border: 3px solid #fff;

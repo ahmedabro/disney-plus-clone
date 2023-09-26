@@ -88,7 +88,7 @@ const ViewerBox = styled.div`
         transition: all 250ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
     }
     &:hover {
-        border: 3px solid #fff;
+        border: 3px solid rgba(255, 255, 255, 0.75);
         transform: scale(1.05);
         video {
             opacity: 1;

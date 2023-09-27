@@ -8,7 +8,7 @@ function Movies() {
 
     const base_url = "https://image.tmdb.org/t/p/original/"
     const movies = useSelector(selectMovies)
-    console.log("This is movies", movies)
+    // console.log("This is movies", movies)
 
   return (
     <Container>
@@ -17,7 +17,7 @@ function Movies() {
         { movies && 
             movies.map((movie) => (
                 <Wrap key={movie.id}>
-                    <Link to={`details/${movie.id}`}>
+                    <Link to={`/details/${movie.id}`}>
                         <img src={`${base_url}${movie.poster_path}`} alt={movie.name ? movie.name : movie.title} />
                         {/* <p>{ movie.name ? movie.name : movie.title }</p> */}
                     </Link>

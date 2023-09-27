@@ -1,41 +1,76 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
+import { useParams } from 'react-router-dom'
+import { selectMovies } from '../features/movie/movieSlice'
+import { useSelector } from 'react-redux'
+
 
 function Details() {
-  return (
-    <Container>
-      <Background>
-        <img src='/images/bao.jpg' alt='Bao' />
-      </Background>
-      <Title>
-        <img src='/images/bao-logo.webp' alt='bao logo' />
-      </Title>
-      <ButtonGroup>
-        <PlayBtn>
-          <img src='/images/play-icon-black.png' />
-          <span>Play</span>
-        </PlayBtn>
-        <TrailerBtn>
-          <img src='/images/play-icon-white.png' />
-          <span>Trailer</span>
-        </TrailerBtn>
-        <AddBtn>
-          +
-        </AddBtn>
-        <GroupWatchBtn>
-          <img src='/images/group-icon.png' />
-        </GroupWatchBtn>
-      </ButtonGroup>
-      <Subtitle>
-        <p>Hello world this is a dummy text just written in order to fill the space</p>
-      </Subtitle>
-      <Description>
-        <p>
-          Filler text is text that shares some characteristics of a real written text, but is random or otherwise generated. It may be used to display a sample of fonts, generate text for testing, or to spoof an e-mail spam filter.
-        </p>
-      </Description>
-    </Container>
-  )
+
+  const base_url = "https://image.tmdb.org/t/p/original/"
+  const { id } = useParams()
+  const movies = useSelector(selectMovies)
+  const movie = movies.filter(movie => movie.id == id)
+  console.log("Movies from redux state : ", movies)
+  console.log("Movie matched : ", movie)
+
+
+
+  // let tmpMovie = null;
+
+  // useEffect(() => {
+  //   if (tmpMovie == null) {
+  //     let tmpMovie = movies.filter(movie => movie.id == id)
+  //     console.log("Movie matched: ", tmpMovie[0])
+  //     setMovie(tmpMovie[0])
+  //   }
+  // }, [0])
+
+
+  if (movie.length != 0) {
+    return (
+      <Container>
+        <Background>
+          <img
+            src={`${base_url}${movie[0].backdrop_path}`}
+            alt='Bao' />
+        </Background>
+        <Title>
+          <h1>{movie[0].name ? movie[0].name : movie[0].title}</h1>
+        </Title>
+        <ButtonGroup>
+          <PlayBtn>
+            <img src='/images/play-icon-black.png' />
+            <span>Play</span>
+          </PlayBtn>
+          <TrailerBtn>
+            <img src='/images/play-icon-white.png' />
+            <span>Trailer</span>
+          </TrailerBtn>
+          <AddBtn>
+            +
+          </AddBtn>
+          <GroupWatchBtn>
+            <img src='/images/group-icon.png' />
+          </GroupWatchBtn>
+        </ButtonGroup>
+        {/* <Subtitle>
+          <p>Hello world this is a dummy text just written in order to fill the space</p>
+        </Subtitle> */}
+        <Description>
+          <p>
+            {movie[0].overview}
+          </p>
+        </Description>
+      </Container>
+    )
+  }
+  else {
+    return (
+      <div></div>
+    )
+  }
+  
 }
 
 export default Details
@@ -46,6 +81,7 @@ const Container = styled.div`
     padding: 0 calc(3.5vw + 5px);
     position: relative;
     padding-top: 70px;
+    max-width: 650px;
 `
 const Background = styled.div`
     position: fixed;
@@ -63,12 +99,17 @@ const Background = styled.div`
 
 `
 const Title = styled.div`
-    width: 250px;
+    // width: 250px;
     margin-bottom: 25px;
     img {
       width: 100%;
       object-fit: contain;
       min-width: 200px;
+    }
+    h1 {
+      font-size: 45px;
+      line-height: 1.2;
+      font-weight: 700;
     }
 `
 const ButtonGroup = styled.div`

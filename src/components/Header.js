@@ -1,35 +1,38 @@
 import React from 'react'
 import styled from 'styled-components'
+import { Link } from 'react-router-dom'
 
 function Header() {
   return (
     <Nav>
-          <Logo src="/images/logo.svg" />
+          <Link to='/'>
+            <Logo src="/images/logo.svg" />
+          </Link>
           <NavMenu>
-              <a>
+              <Link to='/'>
                   <img src='/images/home-icon.svg' />
                   <span>Home</span>
-              </a>
-              <a>
+              </Link>
+              <Link>
                   <img src='/images/search-icon.svg' />
                   <span>Search</span>
-              </a>
-              <a>
+              </Link>
+              <Link>
                   <img src='/images/watchlist-icon.svg' />
                   <span>Watchlist</span>
-              </a>
-              <a>
+              </Link>
+              <Link>
                   <img src='/images/original-icon.svg' />
                   <span>Originals</span>
-              </a>
-              <a>
+              </Link>
+              <Link>
                   <img src='/images/movie-icon.svg' />
                   <span>Movies</span>
-              </a>
-              <a>
+              </Link>
+              <Link>
                   <img src='/images/series-icon.svg' />
                   <span>Series</span>
-              </a>
+              </Link>
           </NavMenu>
           <UserImg src='/images/profile.jpeg' />
     </Nav>
@@ -60,6 +63,8 @@ const NavMenu = styled.div`
         display: flex;
         align-items: center;
         gap: 5px;
+        color: inherit;
+        text-decoration: none;
         img {
             width: 20px;
         }

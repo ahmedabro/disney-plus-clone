@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 
 function Viewers() {
@@ -9,35 +9,35 @@ function Viewers() {
       <Row>
         <ViewerBox>
             <img src='/images/viewers-disney.png' alt='disney' />
-            <video>
+            <video autoPlay='true' muted='muted' loop='true'>
                 <source src="/videos/1564674844-disney.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
             </video>
         </ViewerBox>
         <ViewerBox>
             <img src='/images/viewers-pixar.png' alt='pixar' />
-            <video>
+            <video autoPlay='true' muted='muted' loop='true'>
                 <source src="/videos/1564676714-pixar.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
             </video>
         </ViewerBox>
         <ViewerBox>
             <img src='/images/viewers-marvel.png' alt='marvel studios' />
-            <video>
+            <video autoPlay='true' muted='muted' loop='true'>
                 <source src="/videos/1564676115-marvel.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
             </video>
         </ViewerBox>
         <ViewerBox>
             <img src='/images/viewers-starwars.png' alt='starwars' />
-            <video>
+            <video autoPlay='true' muted='muted' loop='true'>
                 <source src="/videos/1608229455-star-wars.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
             </video>
         </ViewerBox>
         <ViewerBox>
             <img src='/images/viewers-national.png' alt='national geographic' />
-            <video>
+            <video autoPlay='true' muted='muted' loop='true'>
                 <source src="/videos/1564676296-national-geographic.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
             </video>

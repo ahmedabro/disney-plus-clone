@@ -3,10 +3,22 @@ import styled from 'styled-components'
 import ImgSlider from './ImgSlider'
 import Viewers from './Viewers'
 import Movies from './Movies'
+import { useNavigate } from 'react-router-dom'
+import { selectUserName } from '../features/user/userSlice'
+import { useSelector } from 'react-redux'
 
 
 function Home() {
 
+  const navigate = useNavigate()
+  
+  const user = useSelector(selectUserName)
+
+  useEffect(() => {
+    if (!user) {
+      navigate("/login")
+    }
+  })
   
   return (
     <Container>

@@ -1,46 +1,112 @@
-# Getting Started with Create React App and Redux
+# 🎬 Disney+ Clone
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
+A modern Disney+ inspired streaming platform built with **React** and **Firebase**, showcasing responsive UI development, Google Authentication, and dynamic movie content.
 
-## Available Scripts
+> **Disclaimer:** This project is built for educational and portfolio purposes only. It is not affiliated with or endorsed by Disney.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## ✨ Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- 🎨 Disney+ inspired user interface
+- 🔐 Google Authentication with Firebase
+- 🔥 Firebase project integration
+- 📱 Fully responsive design
+- 🎬 Dynamic movie banners and thumbnails
+- 🖱️ Interactive hover effects and smooth UI transitions
+- ⚡ Fast and lightweight React application
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## 🛠️ Tech Stack
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Frontend
+- React (Create React App)
+- JavaScript (ES6+)
+- CSS3
+- Styled Components
 
-### `npm run build`
+### Backend & Services
+- Firebase Authentication
+- Firebase Hosting
+- Google Cloud Console (OAuth Configuration)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Data Source
+- Movie posters and backdrop images from:
+  - https://image.tmdb.org/t/p/original/
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🚀 Getting Started
 
-### `npm run eject`
+### Clone the repository
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```bash
+git clone https://github.com/your-username/disney-plus-clone.git
+cd disney-plus-clone
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Install dependencies
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```bash
+npm install
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Configure Firebase
 
-## Learn More
+Create a Firebase project and enable:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Authentication (Google Provider)
+- Firestore Database (if required)
+- Firebase Storage (if required)
+- Firebase Hosting (optional)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Create a `.env` file (or update the Firebase configuration) with your project's Firebase credentials.
+
+### Run the application
+
+```bash
+npm start
+```
+
+The application will be available at:
+
+```
+http://localhost:3000
+```
+
+---
+
+
+## 🎯 What This Project Demonstrates
+
+- Building pixel-perfect user interfaces in React
+- Responsive web design
+- Firebase Authentication integration
+- Google OAuth configuration
+- Component-based architecture
+- State management using React
+- Clean and reusable UI components
+
+---
+
+## 📌 Future Improvements
+
+- Movie search functionality
+- Individual movie details page
+- Watchlist feature
+- Video trailer playback
+- Category filtering
+- Dark/Light theme support
+
+---
+
+## 🙏 Credits
+
+- UI inspired by Disney+
+- Movie images provided by **The Movie Database (TMDb)**
+
+---
+
+## 📄 License
+
+This project is created for educational and portfolio purposes only.
